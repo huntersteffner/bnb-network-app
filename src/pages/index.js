@@ -3,11 +3,13 @@
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
 
+import Login from "./Login";
+
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
+    <div data-theme="autumn">
       <div data-theme="">
         <h1 className="text-5xl font-bold underline">Hello world!</h1>
       </div>
@@ -20,6 +22,7 @@ export default function Home() {
       <div data-theme="retro">
         <button className="btn btn-primary">Button</button>
       </div>
-    </>
+      <Login/>
+    </div>
   )
 }
