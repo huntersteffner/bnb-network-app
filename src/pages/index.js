@@ -18,8 +18,34 @@ export default function Home() {
         {/* <Navbar /> */}
 
         {/* <Route path="/" element={<Explore />} /> */}
-        <Explore />
-          <Login />
+        <p>Slider</p>
+        <div>
+          <h1>Explore Locations</h1>
+          <div>
+                <p>img</p>
+                <p>title</p>
+                <p>price</p>
+                <p>dates</p>
+            </div>
+            <div>
+                <p>img</p>
+                <p>title</p>
+                <p>price</p>
+                <p>dates</p>
+            </div>
+            <div>
+                <p>img</p>
+                <p>title</p>
+                <p>price</p>
+                <p>dates</p>
+            </div>
+            <div>
+                <p>img</p>
+                <p>title</p>
+                <p>price</p>
+                <p>dates</p>
+            </div>
+        </div>
           {/* <Footer /> */}
       </>
     // </Router>

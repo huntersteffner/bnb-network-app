@@ -1,7 +1,8 @@
-const Navbar = () => {
-    // jsx pulled from https://daisyui.com/components/navbar/
-  return (
+import Link from 'next/link'
 
+const Navbar = () => {
+  // jsx pulled from https://daisyui.com/components/navbar/
+  return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
@@ -26,13 +27,13 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Explore</a>
+              <Link href="/">Explore</Link>
             </li>
             <li>
-              <a>My </a>
+              <Link href="/History">My History</Link>
             </li>
             <li>
-              <a>About</a>
+              <Link href="/Profile">My Profile</Link>
             </li>
           </ul>
         </div>

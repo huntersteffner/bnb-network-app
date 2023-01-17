@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const SignUp =() => {
     return (
         <>
@@ -24,7 +26,9 @@ const SignUp =() => {
       </form>
       <div className="flex justify-center items-center space-x-3 mt-3">
         <h2 className="text-2xl">Already a Member?</h2>
-        <button className="btn btn-accent">Click Here</button>
+        <Link href="/Login">
+          <button className="btn btn-accent">Click Here</button>
+        </Link>
       </div>
     </>
     )
