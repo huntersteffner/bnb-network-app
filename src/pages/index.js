@@ -2,27 +2,26 @@
 // import Image from 'next/image'
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Login from "./Login";
+import Login from './Login'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Explore from './Explore'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div data-theme="autumn">
-      <div data-theme="">
-        <h1 className="text-5xl font-bold underline">Hello world!</h1>
+    // <Router>
+      <div data-theme="autumn">
+        {/* <Navbar /> */}
+
+        {/* <Route path="/" element={<Explore />} /> */}
+        <Explore />
+          <Login />
+          {/* <Footer /> */}
       </div>
-      <div data-theme="cupcake">
-        <button className="btn btn-primary">Button</button>
-      </div>
-      <div data-theme="synthwave">
-        <button className="btn btn-primary">Button</button>
-      </div>
-      <div data-theme="retro">
-        <button className="btn btn-primary">Button</button>
-      </div>
-      <Login/>
-    </div>
+    // </Router>
   )
 }
