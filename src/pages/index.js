@@ -2,7 +2,7 @@
 // import Image from 'next/image'
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
 
 import Login from './Login'
 import Navbar from '../components/Navbar'
@@ -14,14 +14,14 @@ import Explore from './Explore'
 export default function Home() {
   return (
     // <Router>
-      <div data-theme="autumn">
+      < >
         {/* <Navbar /> */}
 
         {/* <Route path="/" element={<Explore />} /> */}
         <Explore />
           <Login />
           {/* <Footer /> */}
-      </div>
+      </>
     // </Router>
   )
 }

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Login = () => {
   return (
     <>
@@ -11,6 +13,7 @@ const Login = () => {
           <p className="text-2xl">Password</p>
           <input type="password" className="input input-bordered input-ghost" />
         </div>
+
         <button
           type="submit"
           className="btn btn-secondary mt-3 mx-auto md:w-1/2"
@@ -20,7 +23,9 @@ const Login = () => {
       </form>
       <div className="flex justify-center items-center space-x-3 mt-3">
         <h2 className="text-2xl">Not a member?</h2>
-        <button className="btn btn-accent">Click Here</button>
+        <Link href="/SignUp">
+          <button className="btn btn-accent">Click Here</button>
+        </Link>
       </div>
     </>
   )
