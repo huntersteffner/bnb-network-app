@@ -1,6 +1,33 @@
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { getAuth, updateProfile } from 'firebase/auth'
+import {
+  updateDoc,
+  doc,
+  collection,
+  getDocs,
+  query,
+  where,
+  orderBy,
+  deleteDoc,
+} from 'firebase/firestore'
+import { db } from '../firebase.config'
+import { useRouter } from 'next/router'
+
 
 const Profile = () => {
+  const router = useRouter()
+
+  const auth = getAuth()
+  // const [loading, setLoading] = useState(true)
+  const [listings, setListings] = useState(null)
+  const [changeDetails, setChangeDetails] = useState(false)
+  const [formData, setFormData] = useState({
+    name: auth.currentUser.displayName,
+    email: auth.currentUser.email,
+  })
+  
+  const { name, email } = formData
   return (
     <div className="container mx-auto">
       <div className="flex flex-col justify-center items-center">
