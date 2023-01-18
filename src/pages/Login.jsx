@@ -33,10 +33,11 @@ const Login = () => {
       )
 
       if (userCredential.user) {
-        navigate('/')
+        router.replace('/')
       }
     } catch (error) {
       alert('Bad user credentials')
+      console.log(error)
     }
   }
   return (
